@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row">
+		<div class="col-6">
+			<div class="task-card">
+				<div class="task-detail-header">
+					<div style="display: flex">
+						<div>
+							<img src="assets/img/placeholder.png"/>
+						</div>
+						
+						<div class="task-labels">
+							<span class="task-title">
+								<em>{{task[0].title}}</em>
+
+							</span>
+							
+							<span class="task-officer">
+								Assigned to {{task[0].officer}}
+							</span>
+						
+						</div>	
+					
+					
+					</div>
+				</div>
+				<div class="task-body">
+					<span class="task-desc-head">Task Description</span>
+					<p class="task-desc-body">{{task[0].description}}</p>
+					<p>
+						<span class="task-detail-label">Assigned: </span>{{task[0].assigned_date}}
+					</p>
+					<p>
+						<span class="task-detail-label">Due: </span>{{task[0].due_date}}
+					</p>
+					<p>
+						<span class="task-detail-label">Status: </span>
+					</p>
+				</div>
+		</div>
+	</div>
+</div>

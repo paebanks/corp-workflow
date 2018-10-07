@@ -1,0 +1,41 @@
+.task-card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.task-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.task-body {
+    padding: 2px 16px;
+}
+
+.task-header{
+	line-height: 50px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+.task-footer{
+	line-height: 70px;
+}
+
+.task-footer span{
+	padding: 2px 15px;
+	
+}
+
+.task-footer span:hover{
+	cursor: pointer;
+}
+
+.stub{
+	align-self: center; 
+	width: 250px; 
+	border: 1px solid green;
+	height: 45px;
+}

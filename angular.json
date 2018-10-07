@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              ]
           },
           "configurations": {
             "production": {
@@ -74,7 +75,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "../node_modules/jquery/dist/jquery.min.js",
+              "src/vendor/js/jquery.datatables.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

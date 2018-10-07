@@ -1,0 +1,51 @@
+  [
+      {
+        "user_id": "00506",
+        "surname": "Diaz",
+        "firstname": "Roberto",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": [] 
+      },
+      {
+        "user_id": "01052",
+        "surname": "Ebanks",
+        "firstname": "Princeton",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": []
+      },
+      {
+        "user_id": "01213",
+        "surname": "McNaughton",
+        "firstname": "Sean",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": [] 
+      },
+      {
+        "user_id": "00211",
+        "surname": "Cox",
+        "firstname": "Janelle",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": [] 
+      },
+      {
+        "user_id": "00405",
+        "surname": "Budd",
+        "firstname": "Trevor",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": [] 
+      },
+      {
+        "user_id": "00500",
+        "surname": "Dougherty",
+        "firstname": "Ainsworth",
+        "department": "ISU",
+        "image_url": "",
+        "tasks": [] 
+      }
+
+  ]

@@ -1,0 +1,84 @@
+
+<div class="container">
+		<div class="row">
+      <div class="col-6">
+        <div class="assign-position">
+          <app-task [assignedTask]="task" [view]="'stub'"
+
+          (drop) = "handleDrag($event)"
+          ></app-task>
+        </div>
+      </div>
+
+
+		<div class="col-6">
+     
+		<ngx-datatable class="material"
+        [rows]="users"
+        [columnMode]="'force'"
+        [headerHeight] = "50"
+        [rowHeight] = "50"
+        [footerHeight] = "50"
+        >
+        
+        <ngx-datatable-column
+            [width]="30"
+            [sortable]="false"
+            [canAutoResize]="false"
+            [draggable]="false"
+            [resizeable]="false"
+            [headerCheckboxable]="true"
+            [checkboxable]="true"
+            >
+          </ngx-datatable-column>
+          
+        <ngx-datatable-column name="ID">
+          <ng-template let-column="column" ngx-datatable-header-template>
+             {{column.name}}
+          </ng-template>
+          <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            {{row.user_id}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Name">
+          <ng-template let-column="column" ngx-datatable-header-template>
+             {{column.name}}
+          </ng-template>
+          <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <img src="assets/img/placeholder.png"/>{{row.firstname}}{{" "}}{{row.surname}}
+          </ng-template>
+        </ngx-datatable-column>
+        
+      </ngx-datatable>
+    
+      </div>
+      </div>
+
+   <div class="row">
+      <div class="col-md-6 mb-3">
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="staffID" class="bmd-label-floating">Staff ID</label>
+            <input type="text" class="form-control" id="staffID" name="staffID"
+            placeholder="" value="" required
+            [(ngModel)] = "staffID"
+            (ngModelChange) = "getSelectedUser($event)"
+            >
+          </div>
+          <div class="invalid-feedback">
+            Valid staff ID is required.
+          </div>
+        
+          <span class="form-group bmd-form-group"> <!-- needed to match padding for floating labels -->
+            <button type="submit" class="btn btn-primary"
+            [disabled] = "!validUserSelected" 
+            (click)="assignTaskToUser()"
+            >Assign Task</button>
+          </span>
+        </form>
+        <div>
+          current selected user: {{getSelectedUser()}}
+        </div>        
+      </div>
+	 </div>

@@ -1,0 +1,34 @@
+<div *ngIf="view==='mini'">
+<div class="task-card">
+	<div class="task-header">
+		{{task[0].title}}
+	</div>
+	<div class="task-body">
+		<p *ngIf="task">
+			{{task[0].description}}
+		</p>
+		<p>
+			Assigned on: {{task[0].due_date}}
+		</p>
+		<p>
+			Status: 
+		</p>
+
+	</div>
+	<div class="task-footer">
+		<a [routerLink] = '["/tasks", task[0].task_id]'> <span class="mdi mdi-eye-outline"></span></a>
+		<a [routerLink] = '["/tasks", task[0].task_id, "edit"]'><span class="mdi mdi-pencil"></span></a>
+		<a [routerLink] = '["/tasks", task[0].task_id, "complete"]'><span class="mdi mdi-check"></span></a>
+		<a [routerLink] = '["/tasks", task[0].task_id, "assign"]'><span class="mdi mdi-plus"></span></a>
+		<a [routerLink] = '["/tasks", task[0].task_id, "delete"]'><span class="mdi mdi-delete"></span></a>
+	</div>
+
+</div>
+</div>
+
+<div *ngIf="view==='stub'" class="stub">
+	<span *ngIf="assignedTask !== null">
+		{{assignedTask[0].task_id}} | {{assignedTask[0].title}}
+	</span>
+	
+</div>

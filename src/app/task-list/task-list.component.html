@@ -1,0 +1,47 @@
+	<ngx-datatable class="material"
+        [rows]="tasks"
+        [columnMode]="'force'"
+        [headerHeight] = "50"
+        [rowHeight] = "50"
+        [footerHeight] = "50"
+        [selected] = "selected"
+        (select)='onSelect($event)'
+        [selectionType] = "'single'"
+        >
+        <ngx-datatable-column
+            [width]="30"
+            [sortable]="false"
+            [canAutoResize]="false"
+            [draggable]="false"
+            [resizeable]="false"
+            [headerCheckboxable]="true"
+            [checkboxable]="true"
+
+            >
+          </ngx-datatable-column>
+        <ngx-datatable-column name="Title">
+          <ng-template let-column="column" ngx-datatable-header-template>
+             {{column.name}}
+          </ng-template>
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Officer">
+          <ng-template let-column="column" ngx-datatable-header-template>
+             {{column.name}}
+          </ng-template>
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Priority">
+          <ng-template let-column="column" ngx-datatable-header-template>
+             {{column.name}}
+          </ng-template>
+          <ng-template let-value="value" ngx-datatable-cell-template>
+            <span [ngClass]="getPriorityClass(value)">{{getPriorityString(value)}}</span>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    
