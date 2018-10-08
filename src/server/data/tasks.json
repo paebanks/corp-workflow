@@ -1,58 +1,54 @@
-  [
-
-      	{
-      		"task_id": "ISU-10",
-      		"title": "Set up 10 computers",
-                  "description": "The ten computers are to be distributed to staff given priority",
-      		"officer": "Roberto Diaz",
-      		"priority": 2,
-      		"assigned_date": "02/10/2018",
-      		"due_date": "16/10/2018",
-      		"metrics": []
-
-      	},
-      	{
-      		"task_id": "ISU-20",
-      		"title": "Enter 2 years of ESSJ data",
-                  "description": "Management needs to see some results on this",
-      		"officer": "Sean McNaughton",
-      		"priority": 0,
-      		"assigned_date": "02/10/2018",
-      		"due_date": "16/10/2018",
-      		"metrics": []
-
-      	},
-      	{
-      		"task_id": "ISU-30",
-      		"title": "Build app for ECM",
-                  "description": "Winsome has been waiting a year for this app",
-      		"officer": "Princeton Ebanks",
-      		"priority": 1,
-      		"assigned_date": "02/10/2018",
-      		"due_date": "16/10/2018",
-      		"metrics": []
-
-      	},
-      	{
-      		"task_id": "ISU-40",
-      		"title": "Order New SAN",
-                  "description": "This is critical. THe old infrastructure is creaking",
-      		"officer": "Trevor Budd",
-      		"priority": 0,
-      		"assigned_date": "02/10/2018",
-      		"due_date": "16/10/2018",
-      		"metrics": []
-
-      	},
-      	{
-      		"task_id": "ISU-50",
-      		"title": "Fix DGs Computer",
-                  "description": "The DG has been asking about this for weeks",
-      		"officer": "Aisnworth Dougherty",
-      		"priority": 1,
-      		"assigned_date": "02/10/2018",
-      		"due_date": "16/10/2018",
-      		"metrics": []
-
-      	}
-]
+{
+  "tasks": [
+    {
+      "task_id": "ISU-10",
+      "title": "Set up 10 computers",
+      "description": "The ten computers are to be distributed to staff given priority",
+      "officer": "Roberto Diaz",
+      "priority": 2,
+      "assigned_date": "02/10/2018",
+      "due_date": "16/10/2018",
+      "metrics": []
+    },
+    {
+      "task_id": "ISU-20",
+      "title": "Enter 2 years of ESSJ data",
+      "description": "Management needs to see some results on this",
+      "officer": "Sean McNaughton",
+      "priority": 0,
+      "assigned_date": "02/10/2018",
+      "due_date": "16/10/2018",
+      "metrics": []
+    },
+    {
+      "task_id": "ISU-30",
+      "title": "Build app for ECM",
+      "description": "Winsome has been waiting a year for this app",
+      "officer": "Princeton Ebanks",
+      "priority": 1,
+      "assigned_date": "02/10/2018",
+      "due_date": "16/10/2018",
+      "metrics": []
+    },
+    {
+      "task_id": "ISU-40",
+      "title": "Order New SAN",
+      "description": "This is critical. THe old infrastructure is creaking",
+      "officer": "Trevor Budd",
+      "priority": 0,
+      "assigned_date": "02/10/2018",
+      "due_date": "16/10/2018",
+      "metrics": []
+    },
+    {
+      "task_id": "ISU-50",
+      "title": "Fix DGs Computer",
+      "description": "The DG has been asking about this for weeks",
+      "officer": "Aisnworth Dougherty",
+      "priority": 1,
+      "assigned_date": "02/10/2018",
+      "due_date": "16/10/2018",
+      "metrics": []
+    }
+  ]
+}
