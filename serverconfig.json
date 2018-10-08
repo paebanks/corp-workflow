@@ -1,0 +1,8 @@
+{
+	"useLocalFile": true,
+	"mongoConfig": {
+		"url": "",
+		"user": "",
+		"password": ""
+	}
+}

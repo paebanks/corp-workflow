@@ -67,13 +67,14 @@ def update_user(id):
 
 	if(request_data):
 
-		updated_user = {
-			'user_id': request_data['user_id'],
-			'surname': request_data['surname'],
-			'firstname': request_data['firstname'],
-			'department': request_data['department'],
-			'image_url': request_data['image_url']
-		}
+		# updated_user = {
+		# 	'user_id': request_data['user_id'],
+		# 	'surname': request_data['surname'],
+		# 	'firstname': request_data['firstname'],
+		# 	'department': request_data['department'],
+		# 	'image_url': request_data['image_url']
+		# }
+		updated_user = request_data
 
 		with open('data/users.json', "r") as userFile:
 			users = json.load(userFile)
@@ -81,6 +82,8 @@ def update_user(id):
 		for user in users['users']:
 			if(user['user_id'] == id):
 				user.update(updated_user)
+				with open('data/users.json', "w") as userFile:
+					json.dump(users, userFile)
 				return jsonify(user)
 
 		return jsonify({'message': 'no user found'})
@@ -125,22 +128,25 @@ def update_task(id):
 	request_data = request.get_json()
 
 	if(request_data):
-		updated_task = {
-		'task_id': request_data['task_id'],
-		'title': request_data['title'],
-		'description': request_data['description'],
-		'officer': request_data['officer'],
-		'priority': request_data['priority'],
-		'assigned_date': request_data['assigned_date'],
-		'due_date': request_data['due_date']
-		}
+		# updated_task = {
+		# 'task_id': request_data['task_id'],
+		# 'title': request_data['title'],
+		# 'description': request_data['description'],
+		# 'officer': request_data['officer'],
+		# 'priority': request_data['priority'],
+		# 'assigned_date': request_data['assigned_date'],
+		# 'due_date': request_data['due_date']
+		# }
+		updated_task = request_data
 
-		with open('data/tasks', "r") as taskFile:
+		with open('data/tasks.json', "r") as taskFile:
 			tasks = json.load(taskFile)
 
 		for task in tasks['tasks']:
-			if(task[task_id] == id):
+			if(task['task_id'] == id):
 				task.update(updated_task)
+				with open('data/tasks.json', "w") as taskFile:
+					json.dump(tasks, taskFile)
 				return jsonify(task)
 		return jsonify({'message': 'task not found'})
 
